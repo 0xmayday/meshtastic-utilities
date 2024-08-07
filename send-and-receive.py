@@ -34,7 +34,8 @@ def onReceive(packet, interface):
             
             # Add the message to history and print it
             message_history.append(message)
-            print(f"\n{message} \n> ", end="", flush=True)
+            print(f"\n{message}")
+            print(f"[{channel_name}]> ", end="", flush=True)
     except KeyError as e:
         print(f"Error processing packet: {e}")
 
